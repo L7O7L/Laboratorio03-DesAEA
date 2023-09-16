@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace Laboratorio03
         public MainWindow()
         {
             InitializeComponent();
+            McDataGrid.ItemsSource = LoadCollectionData();
+        }
+
+        private IEnumerable LoadCollectionData()
+        {
+            return McDataGrid.ItemsSource;
         }
     }
 }
